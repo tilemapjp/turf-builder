@@ -45,11 +45,9 @@ fs.writeFile('tmp.txt', outputFileString,  function(err) {
         paths: ['./node_modules/@turf']
     });
 
-    b.transform(babelify, {
-        presets: ['es2015', 'react']
-    });/*.transform({
+    b.transform({
         global: true
-    }, 'uglifyify');*/
+    }, 'uglifyify');
     b.bundle().pipe(source('app.js'))
         .pipe(gulp.dest('./dest/assets/js/'));
 });
