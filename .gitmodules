@@ -1,0 +1,3 @@
+[submodule "local_turf"]
+	path = local_turf
+	url = https://github.com/tilemapjp/turf.git
