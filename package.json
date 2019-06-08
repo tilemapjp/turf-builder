@@ -20,12 +20,14 @@
     "url": "https://github.com/rowanwins/turf-builder/issues"
   },
   "dependencies": {
-    "@turf/turf": "*",
+    "@turf/constrained-tin": "file:local_turf/packages/turf-constrained-tin",
+    "@turf/turf": "file:local_turf/packages/turf",
     "body-parser": "1.15.2",
     "browserify": "13.1.0",
     "ejs": "2.5.2",
     "express": "4.14.0",
-    "uglifyify": "3.0.4"
+    "uglifyify": "3.0.4",
+    "babelify": "*"
   },
   "scripts": {
     "start": "node index.js"
@@ -33,5 +35,10 @@
   "engines": {
     "node": "6.4.0",
     "npm": "3.10.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "gulp": "^4.0.2",
+    "vinyl-source-stream": "^2.0.0"
   }
 }
