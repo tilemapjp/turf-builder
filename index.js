@@ -105,7 +105,7 @@ function startServer() {
 function checkCreateOutputDirectory() {
 	fs.lstat('./outputs', function (err, inodeStatus) {
 		if (err) {
-			fs.mkdir('./outputs');
+			fs.mkdir('./outputs', function() {});
 			return;
 		}
 
